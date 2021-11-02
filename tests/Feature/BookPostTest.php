@@ -82,7 +82,6 @@ class BookPostTest extends TestCase
             'authors' => $authorIds,
         ];
         $data = array_merge($validData, $invalidData);
-
         $response = $this
             ->actingAs($user)
             ->postJson('/api/books', $data);

@@ -14,11 +14,11 @@ class PostBookRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'isbn' => 'required|string',
+            'isbn' => 'required|numeric|digits_between:97883283023414,97883283023422',
             'title' => 'required|string',
             'description' => 'required|string',
-            'authors' => 'required|array',
-            'authors.*' => 'exists:authors,id'
+            'authors' => 'required|present|array',
+            'authors.*' => 'numeric|exists:authors,id'
         ];
     }
 }
