@@ -18,11 +18,14 @@ class Admin
     public function handle($request, Closure $next)
     {
         $user = \Auth::user();
-        if ($user) {
-            return $next($request);
+        if (!$user) {
+            return ResponderProviderFacade::unauthorizedError(__('messages.response.unauthorized'));
+        }
+        if (!$user->is_admin) {
+            return ResponderProviderFacade::error(403, __('messages.response.unaccessable'));
         }
 
-        return ResponderProviderFacade::unauthorizedError(__('messages.response.unauthorized'));
 
+        return $next($request);
     }
 }

@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="1.007692">
-    <testsuite name="Feature" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="1.007692">
-      <testsuite name="Tests\Feature\BookPostTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookPostTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="1.007692">
-        <testcase name="testDenyGuestAccess" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookPostTest.php" line="13" assertions="1" time="1.007692"/>
+  <testsuite name="" tests="1" assertions="1" errors="0" warnings="0" failures="1" skipped="0" time="0.841555">
+    <testsuite name="Feature" tests="1" assertions="1" errors="0" warnings="0" failures="1" skipped="0" time="0.841555">
+      <testsuite name="Tests\Feature\BookPostTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookPostTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="1" skipped="0" time="0.841555">
+        <testcase name="testSuccessfulPost" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookPostTest.php" line="43" assertions="1" time="0.841555">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testSuccessfulPost
+Expected response status code [201] but received 200.
+  Failed asserting that 201 is identical to 200.
+
+/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
+/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookPostTest.php:57</failure>
+        </testcase>
       </testsuite>
     </testsuite>
   </testsuite>

@@ -1,6 +1,7 @@
 <?php
 return [
     'response' => [
-        'unauthorized' => 'شما اجازه ورود ندارید'
+        'unauthorized' => 'لطفا لاگین کنید',
+        'unaccessable' => 'شما دسترسی ندارید',
     ]
 ];
