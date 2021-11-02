@@ -82,10 +82,10 @@ class BooksListTest extends TestCase
             });
             $book->reviews()->saveMany($reviews);
         });
-
         $response = $this->getJson('/api/books');
 
         $response->assertStatus(200);
+
         $this->assertResponseContainsBooks($response, ...$books);
     }
 

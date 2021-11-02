@@ -14,7 +14,7 @@ class BookRepository extends BaseRepository
 
     public function getBaseQuery()
     {
-        return $this->model()::query();
+        return $this->model()::query()->with(['reviews', 'authors']);
     }
 
     public function orderQuery($query, string $column, string $direction)
