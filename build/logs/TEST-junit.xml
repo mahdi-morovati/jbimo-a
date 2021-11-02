@@ -1,45 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="" tests="21" assertions="59" errors="0" warnings="0" failures="2" skipped="0" time="1.393563">
-    <testsuite name="Feature" tests="21" assertions="59" errors="0" warnings="0" failures="2" skipped="0" time="1.393563">
-      <testsuite name="Tests\Feature\BookPostTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookPostTest.php" tests="21" assertions="59" errors="0" warnings="0" failures="2" skipped="0" time="1.393563">
-        <testsuite name="Tests\Feature\BookPostTest::testValidation" tests="21" assertions="59" errors="0" warnings="0" failures="2" skipped="0" time="1.393563">
-          <testcase name="testValidation with data set #0" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookPostTest.php" line="71" assertions="3" time="1.110217"/>
-          <testcase name="testValidation with data set #1" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookPostTest.php" line="71" assertions="3" time="0.010471"/>
-          <testcase name="testValidation with data set #2" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookPostTest.php" line="71" assertions="3" time="0.010665"/>
-          <testcase name="testValidation with data set #3" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookPostTest.php" line="71" assertions="3" time="0.009973"/>
-          <testcase name="testValidation with data set #4" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookPostTest.php" line="71" assertions="3" time="0.011145"/>
-          <testcase name="testValidation with data set #5" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookPostTest.php" line="71" assertions="3" time="0.010685"/>
-          <testcase name="testValidation with data set #6" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookPostTest.php" line="71" assertions="1" time="0.011613">
-            <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #6 (array(array(673890)), 'isbn')
-Expected response status code [422] but received 500.
-  Failed asserting that 422 is identical to 500.
-
-/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
-/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookPostTest.php:89</failure>
-          </testcase>
-          <testcase name="testValidation with data set #7" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookPostTest.php" line="71" assertions="1" time="0.009081">
-            <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #7 (array(array('978832830234')), 'isbn')
-Expected response status code [422] but received 500.
-  Failed asserting that 422 is identical to 500.
-
-/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
-/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookPostTest.php:89</failure>
-          </testcase>
-          <testcase name="testValidation with data set #8" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookPostTest.php" line="71" assertions="3" time="0.010923"/>
-          <testcase name="testValidation with data set #9" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookPostTest.php" line="71" assertions="3" time="0.011182"/>
-          <testcase name="testValidation with data set #10" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookPostTest.php" line="71" assertions="3" time="0.009429"/>
-          <testcase name="testValidation with data set #11" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookPostTest.php" line="71" assertions="3" time="0.010730"/>
-          <testcase name="testValidation with data set #12" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookPostTest.php" line="71" assertions="3" time="0.009444"/>
-          <testcase name="testValidation with data set #13" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookPostTest.php" line="71" assertions="3" time="0.011054"/>
-          <testcase name="testValidation with data set #14" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookPostTest.php" line="71" assertions="3" time="0.011311"/>
-          <testcase name="testValidation with data set #15" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookPostTest.php" line="71" assertions="3" time="0.009625"/>
-          <testcase name="testValidation with data set #16" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookPostTest.php" line="71" assertions="3" time="0.010682"/>
-          <testcase name="testValidation with data set #17" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookPostTest.php" line="71" assertions="3" time="0.036856"/>
-          <testcase name="testValidation with data set #18" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookPostTest.php" line="71" assertions="3" time="0.039664"/>
-          <testcase name="testValidation with data set #19" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookPostTest.php" line="71" assertions="3" time="0.026397"/>
-          <testcase name="testValidation with data set #20" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookPostTest.php" line="71" assertions="3" time="0.012416"/>
-        </testsuite>
+  <testsuite name="" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="1.189619">
+    <testsuite name="Feature" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="1.189619">
+      <testsuite name="Tests\Feature\BookReviewTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookReviewTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="1.189619">
+        <testcase name="testDenyGuestAccess" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookReviewTest.php" line="15" assertions="1" time="1.189619"/>
       </testsuite>
     </testsuite>
   </testsuite>
