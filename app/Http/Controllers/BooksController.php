@@ -20,6 +20,7 @@ class BooksController extends Controller
     public function getCollection(Request $request, BookPaginateService $bookPaginateService)
     {
         if ($request->page) return BookResource::collection($bookPaginateService->paginate($request, (int)$request->page));
+        return BookResource::collection($bookPaginateService->paginate($request));
     }
 
     public function post(PostBookRequest $request)

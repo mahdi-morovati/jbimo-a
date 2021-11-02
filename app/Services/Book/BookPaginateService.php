@@ -14,9 +14,12 @@ class BookPaginateService extends BookCommonService
     {
 
         $baseQuery = $this->repository->getBaseQuery();
-        $orderQuery = $this->repository->orderQuery($baseQuery, $request->sortColumn, $request->sortDirection);
-        $filteredQuery = $this->sendThroughPipeline($orderQuery, [Title::class]);
-
+//        dd($baseQuery->get()->toArray(), __METHOD__);
+        if (isset($request->sortColumn) && isset($request->sortDirection)) {
+            $orderQuery = $this->repository->orderQuery($baseQuery, $request->sortColumn, $request->sortDirection);
+            $filteredQuery = $this->sendThroughPipeline($orderQuery, [Title::class]);
+        }
+        $filteredQuery = $this->sendThroughPipeline($baseQuery, [Title::class]);
         return $this->repository->paginateQuery($filteredQuery, $perPage);
     }
 }

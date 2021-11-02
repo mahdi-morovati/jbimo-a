@@ -13,7 +13,6 @@ class BooksListTest extends TestCase
 {
     public function testResponseStructure()
     {
-        $this->withoutExceptionHandling();
         factory(Book::class, 5)->make()
 
             ->each(function (Book $book) {
@@ -91,9 +90,41 @@ class BooksListTest extends TestCase
 
     public function testTitleFilter()
     {
-        $book1 = factory(Book::class)->create(['title' => 'PHP for begginers']);
-        $book2 = factory(Book::class)->create(['title' => 'Javascript for dummies']);
-        $book3 = factory(Book::class)->create(['title' => 'Advanced Python']);
+        $book1 = factory(Book::class)->create(['title' => 'PHP for begginers']) ->each(function (Book $book) {
+            $book->save();
+            $book->authors()->saveMany([
+                factory(Author::class)->create(),
+            ]);
+
+            $reviews = factory(BookReview::class, 3)->make()->each(function (BookReview $review) {
+                $review->user()->associate(factory(User::class)->create());
+            });
+            $book->reviews()->saveMany($reviews);
+        });
+
+        $book2 = factory(Book::class)->create(['title' => 'Javascript for dummies']) ->each(function (Book $book) {
+            $book->save();
+            $book->authors()->saveMany([
+                factory(Author::class)->create(),
+            ]);
+
+            $reviews = factory(BookReview::class, 3)->make()->each(function (BookReview $review) {
+                $review->user()->associate(factory(User::class)->create());
+            });
+            $book->reviews()->saveMany($reviews);
+        });
+
+        $book3 = factory(Book::class)->create(['title' => 'Advanced Python']) ->each(function (Book $book) {
+            $book->save();
+            $book->authors()->saveMany([
+                factory(Author::class)->create(),
+            ]);
+
+            $reviews = factory(BookReview::class, 3)->make()->each(function (BookReview $review) {
+                $review->user()->associate(factory(User::class)->create());
+            });
+            $book->reviews()->saveMany($reviews);
+        });
 
         $response = $this->getJson('/api/books?title=php');
 

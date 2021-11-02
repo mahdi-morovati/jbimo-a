@@ -14,7 +14,7 @@ class BookResource extends JsonResource
     /**
      * Transform the resource into an array.
      *
-     * @param  \Illuminate\Http\Request $request
+     * @param \Illuminate\Http\Request $request
      * @return array
      */
     public function toArray($request)
@@ -24,8 +24,8 @@ class BookResource extends JsonResource
             'isbn' => $this->isbn,
             'title' => $this->title,
             'description' => $this->description,
-            'authors' => new AuthorResource($this->authors),
-            'reviews' => new BookReviewResource($this->reviews),
+            'authors' => $this->authors->count() ? AuthorResource::collection($this->authors) : null,
+            'reviews' => $this->reviews->count() ? BookReviewResource::collection($this->reviews) : null,
         ];
     }
 }

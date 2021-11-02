@@ -11,7 +11,6 @@ abstract class Filter
         if (! request()->has($this->filterName())) {
             return $next($request);
         }
-        dd($request, __METHOD__);
         $builder = $next($request);
         return $this->applyFilter($builder);
 

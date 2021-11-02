@@ -1,61 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="" tests="7" assertions="27" errors="0" warnings="0" failures="6" skipped="0" time="1.380807">
-    <testsuite name="Feature" tests="7" assertions="27" errors="0" warnings="0" failures="6" skipped="0" time="1.380807">
-      <testsuite name="Tests\Feature\BooksListTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php" tests="7" assertions="27" errors="0" warnings="0" failures="6" skipped="0" time="1.380807">
-        <testcase name="testResponseStructure" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php" line="14" assertions="16" time="1.153428"/>
-        <testcase name="testListWithoutFilters" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php" line="72" assertions="2" time="0.030640">
-          <failure type="PHPUnit\Framework\AssertionFailedError">Tests\Feature\BooksListTest::testListWithoutFilters
-Invalid JSON was returned from the route.
+  <testsuite name="" tests="1" assertions="1" errors="1" warnings="0" failures="0" skipped="0" time="1.025255">
+    <testsuite name="Feature" tests="1" assertions="1" errors="1" warnings="0" failures="0" skipped="0" time="1.025255">
+      <testsuite name="Tests\Feature\BooksListTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php" tests="1" assertions="1" errors="1" warnings="0" failures="0" skipped="0" time="1.025255">
+        <testcase name="testTitleFilter" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php" line="91" assertions="1" time="1.025255">
+          <error type="TypeError">Tests\Feature\BooksListTest::testTitleFilter
+TypeError: Argument 1 passed to Tests\Feature\BooksListTest::Tests\Feature\{closure}() must be an instance of App\Book, bool given
 
-/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:922
-/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:689
-/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php:209
-/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php:89</failure>
-        </testcase>
-        <testcase name="testTitleFilter" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php" line="92" assertions="2" time="0.010085">
-          <failure type="PHPUnit\Framework\AssertionFailedError">Tests\Feature\BooksListTest::testTitleFilter
-Invalid JSON was returned from the route.
-
-/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:922
-/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:689
-/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php:209
-/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php:101</failure>
-        </testcase>
-        <testcase name="testAuthorsFilter" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php" line="109" assertions="2" time="0.011467">
-          <failure type="PHPUnit\Framework\AssertionFailedError">Tests\Feature\BooksListTest::testAuthorsFilter
-Invalid JSON was returned from the route.
-
-/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:922
-/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:689
-/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php:209
-/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php:126</failure>
-        </testcase>
-        <testcase name="testTitleSort" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php" line="139" assertions="2" time="0.044815">
-          <failure type="PHPUnit\Framework\AssertionFailedError">Tests\Feature\BooksListTest::testTitleSort
-Invalid JSON was returned from the route.
-
-/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:922
-/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:689
-/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php:209
-/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php:149</failure>
-        </testcase>
-        <testcase name="testAvgReviewSort" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php" line="157" assertions="2" time="0.058921">
-          <failure type="PHPUnit\Framework\AssertionFailedError">Tests\Feature\BooksListTest::testAvgReviewSort
-Invalid JSON was returned from the route.
-
-/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:922
-/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:689
-/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php:209
-/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php:181</failure>
-        </testcase>
-        <testcase name="testPagination" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php" line="189" assertions="1" time="0.071451">
-          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BooksListTest::testPagination
-Expected response status code [200] but received 500.
-  Failed asserting that 200 is identical to 500.
-
-/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
-/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php:196</failure>
+/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php:240
+/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php:132</error>
         </testcase>
       </testsuite>
     </testsuite>
