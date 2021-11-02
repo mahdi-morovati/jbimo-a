@@ -13,6 +13,7 @@ class BooksListTest extends TestCase
 {
     public function testResponseStructure()
     {
+        $this->withoutExceptionHandling();
         factory(Book::class, 5)->make()
 
             ->each(function (Book $book) {
@@ -27,8 +28,7 @@ class BooksListTest extends TestCase
             $book->reviews()->saveMany($reviews);
         });
 
-        $response = $this->getJson('/api/books');
-
+        $response = $this->getJson('/api/books?sortColumn=title&sortDirection=ASC&page=15');
         $response->assertStatus(200);
 
         $response->assertJsonStructure([

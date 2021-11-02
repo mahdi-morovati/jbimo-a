@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="7" assertions="22" errors="0" warnings="0" failures="6" skipped="0" time="1.298767">
+    <testsuite name="Feature" tests="7" assertions="22" errors="0" warnings="0" failures="6" skipped="0" time="1.298767">
+      <testsuite name="Tests\Feature\BooksListTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php" tests="7" assertions="22" errors="0" warnings="0" failures="6" skipped="0" time="1.298767">
+        <testcase name="testResponseStructure" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php" line="14" assertions="16" time="1.127379"/>
+        <testcase name="testListWithoutFilters" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php" line="72" assertions="1" time="0.028024">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BooksListTest::testListWithoutFilters
+Expected response status code [200] but received 500.
+  Failed asserting that 200 is identical to 500.
+
+/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
+/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php:88</failure>
+        </testcase>
+        <testcase name="testTitleFilter" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php" line="92" assertions="1" time="0.008655">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BooksListTest::testTitleFilter
+Expected response status code [200] but received 500.
+  Failed asserting that 200 is identical to 500.
+
+/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
+/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php:100</failure>
+        </testcase>
+        <testcase name="testAuthorsFilter" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php" line="109" assertions="1" time="0.010109">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BooksListTest::testAuthorsFilter
+Expected response status code [200] but received 500.
+  Failed asserting that 200 is identical to 500.
+
+/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
+/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php:124</failure>
+        </testcase>
+        <testcase name="testTitleSort" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php" line="139" assertions="1" time="0.034401">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BooksListTest::testTitleSort
+Expected response status code [200] but received 500.
+  Failed asserting that 200 is identical to 500.
+
+/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
+/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php:147</failure>
+        </testcase>
+        <testcase name="testAvgReviewSort" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php" line="157" assertions="1" time="0.046649">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BooksListTest::testAvgReviewSort
+Expected response status code [200] but received 500.
+  Failed asserting that 200 is identical to 500.
+
+/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
+/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php:179</failure>
+        </testcase>
+        <testcase name="testPagination" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php" line="189" assertions="1" time="0.043550">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BooksListTest::testPagination
+Expected response status code [200] but received 500.
+  Failed asserting that 200 is identical to 500.
+
+/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
+/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php:196</failure>
+        </testcase>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>
