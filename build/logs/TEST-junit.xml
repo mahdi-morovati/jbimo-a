@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="" tests="1" assertions="1" errors="1" warnings="0" failures="0" skipped="0" time="1.025255">
-    <testsuite name="Feature" tests="1" assertions="1" errors="1" warnings="0" failures="0" skipped="0" time="1.025255">
-      <testsuite name="Tests\Feature\BooksListTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php" tests="1" assertions="1" errors="1" warnings="0" failures="0" skipped="0" time="1.025255">
-        <testcase name="testTitleFilter" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php" line="91" assertions="1" time="1.025255">
-          <error type="TypeError">Tests\Feature\BooksListTest::testTitleFilter
-TypeError: Argument 1 passed to Tests\Feature\BooksListTest::Tests\Feature\{closure}() must be an instance of App\Book, bool given
-
-/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php:240
-/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookListTest.php:132</error>
-        </testcase>
+  <testsuite name="" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="1.007692">
+    <testsuite name="Feature" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="1.007692">
+      <testsuite name="Tests\Feature\BookPostTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookPostTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="1.007692">
+        <testcase name="testDenyGuestAccess" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookPostTest.php" line="13" assertions="1" time="1.007692"/>
       </testsuite>
     </testsuite>
   </testsuite>
