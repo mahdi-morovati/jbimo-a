@@ -27,22 +27,41 @@ class CreateBooksTable extends Migration
         });
 
         Schema::create('book_author', function (Blueprint $table) {
-            $table->bigInteger('book_id');
-            $table->bigInteger('author_id');
+            $table->foreignId('book_id')
+                ->references('id')
+                ->on('books')
+                ->onDelete('cascade');
+            $table->foreignId('author_id')
+                ->references('id')
+                ->on('authors')
+                ->onDelete('cascade');
 
-            $table->foreign('book_id')->references('id')->on('books')->onDelete('cascade');
-            $table->foreign('author_id')->references('id')->on('authors')->onDelete('cascade');
+//            $table->bigInteger('book_id');
+//            $table->bigInteger('author_id');
+//
+//            $table->foreign('book_id')->references('id')->on('books')->onDelete('cascade');
+//            $table->foreign('author_id')->references('id')->on('authors')->onDelete('cascade');
         });
 
         Schema::create('book_reviews', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('book_id');
-            $table->bigInteger('user_id');
+
+            $table->foreignId('book_id')
+                ->references('id')
+                ->on('books')
+                ->onDelete('cascade');
+            $table->foreignId('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
+
+//            $table->bigInteger('book_id');
+//            $table->bigInteger('user_id');
             $table->tinyInteger('review')->unsigned();
             $table->text('comment');
 
-            $table->foreign('book_id')->references('id')->on('books')->onDelete('cascade');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+//            $table->foreign('book_id')->references('id')->on('books')->onDelete('cascade');
+//            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

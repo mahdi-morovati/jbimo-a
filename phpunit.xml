@@ -22,9 +22,9 @@
         <log type="junit" target="build/logs/TEST-junit.xml"/>
     </logging>
     <php>
-        <ini name="display_errors" value="On" />
-        <ini name="display_startup_errors" value="On" />
-        <ini name="error_reporting" value="-1" />
+        <ini name="display_errors" value="On"/>
+        <ini name="display_startup_errors" value="On"/>
+        <ini name="error_reporting" value="-1"/>
 
         <server name="APP_ENV" value="local"/>
         <server name="BCRYPT_ROUNDS" value="4"/>
@@ -32,7 +32,8 @@
         <server name="MAIL_DRIVER" value="array"/>
         <server name="QUEUE_CONNECTION" value="sync"/>
         <server name="SESSION_DRIVER" value="array"/>
-         <server name="DB_CONNECTION" value="sqlite"/>
-         <server name="DB_DATABASE" value=":memory:"/>
+<!--        <server name="DB_CONNECTION" value="sqlite"/>-->
+        <!--         <server name="DB_DATABASE" value=":memory:"/>-->
+        <server name="DB_DATABASE" value="testing_book_store"/>
     </php>
 </phpunit>

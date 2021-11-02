@@ -18,6 +18,7 @@ class BooksController extends Controller
 {
     public function getCollection(Request $request)
     {
+        dd(__METHOD__);
         //@todo code here
     }
 
