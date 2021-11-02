@@ -6,6 +6,7 @@ declare (strict_types=1);
 namespace App\Http\Resources;
 
 
+use App\Author;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class BookResource extends JsonResource
@@ -24,8 +25,13 @@ class BookResource extends JsonResource
             'isbn' => $this->isbn,
             'title' => $this->title,
             'description' => $this->description,
-            'authors' => $this->authors->count() ? AuthorResource::collection($this->authors) : null,
-            'reviews' => $this->reviews->count() ? BookReviewResource::collection($this->reviews) : null,
+            'authors' => $this->authors->map(function (Author $author) {
+                return ['id' => $author->id, 'name' => $author->name, 'surname' => $author->surname];
+            })->toArray(),
+            'review' => [
+                'avg' => (int)round($this->reviews->avg('review')),
+                'count' => (int)$this->reviews->count(),
+            ],
         ];
     }
 }

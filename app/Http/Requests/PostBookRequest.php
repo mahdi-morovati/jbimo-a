@@ -14,7 +14,11 @@ class PostBookRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //@todo code here
+            'isbn' => 'required|string',
+            'title' => 'required|string',
+            'description' => 'required|string',
+            'authors' => 'required|array',
+            'authors.*' => 'exists:authors,id'
         ];
     }
 }

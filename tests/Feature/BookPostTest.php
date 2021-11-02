@@ -10,7 +10,7 @@ use Tests\TestCase;
 
 class BookPostTest extends TestCase
 {
-        public function testDenyGuestAccess()
+    public function testDenyGuestAccess()
     {
         $author = factory(Author::class)->create();
 

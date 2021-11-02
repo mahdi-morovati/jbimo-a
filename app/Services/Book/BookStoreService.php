@@ -12,10 +12,9 @@ class BookStoreService extends BookCommonService
     public function store(Request $request)
     {
         $book = $this->repository->store($request->all());
-//        $user = auth()->user();
-//        $book = $this->repository->store($request->all());
-//        $user->addresses()->save($book);
-//        dd($user->load('addresses'));
+        $book->authors()->sync($request->authors);
+        $book->load('reviews', 'authors');
+
         return $book;
     }
 }
