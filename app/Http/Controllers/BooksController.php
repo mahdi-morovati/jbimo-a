@@ -13,6 +13,7 @@ use App\Http\Resources\BookReviewResource;
 use App\Services\Book\BookPaginateService;
 use App\Services\Book\BookStoreService;
 use Illuminate\Http\Request;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
@@ -20,7 +21,7 @@ class BooksController extends Controller
 {
     const PAGINATE_PER_PAGE = 15;
 
-    public function getCollection(Request $request, BookPaginateService $bookPaginateService)
+    public function getCollection(Request $request, BookPaginateService $bookPaginateService): AnonymousResourceCollection
     {
         if ($request->page) return BookResource::collection($bookPaginateService->paginate($request, self::PAGINATE_PER_PAGE));
         return BookResource::collection($bookPaginateService->paginate($request));

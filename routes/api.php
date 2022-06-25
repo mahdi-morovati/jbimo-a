@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BooksController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/books', 'BooksController@getCollection');
+Route::get('/books', [BooksController::class, 'getCollection']);
 
-Route::post('/books', 'BooksController@post')->middleware('auth.admin');
+Route::post('/books', [BooksController::class, 'post'])->middleware('auth.admin');
 
-Route::post('/books/{book}/reviews', 'BooksController@postReview')->middleware('auth.admin');
+Route::post('/books/{book}/reviews', [BooksController::class, 'postReview'])->middleware('auth.admin');
 

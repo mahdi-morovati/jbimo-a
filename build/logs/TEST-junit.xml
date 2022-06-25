@@ -1,12 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="Tests\Feature\BookListTest" file="/var/www/jbimo-a/tests/Feature/BookListTest.php" tests="7" assertions="99" errors="0" warnings="0" failures="0" skipped="0" time="1.411353">
-    <testcase name="testResponseStructure" class="Tests\Feature\BookListTest" classname="Tests.Feature.BookListTest" file="/var/www/jbimo-a/tests/Feature/BookListTest.php" line="14" assertions="76" time="1.201378"/>
-    <testcase name="testListWithoutFilters" class="Tests\Feature\BookListTest" classname="Tests.Feature.BookListTest" file="/var/www/jbimo-a/tests/Feature/BookListTest.php" line="71" assertions="2" time="0.040710"/>
-    <testcase name="testTitleFilter" class="Tests\Feature\BookListTest" classname="Tests.Feature.BookListTest" file="/var/www/jbimo-a/tests/Feature/BookListTest.php" line="91" assertions="4" time="0.042045"/>
-    <testcase name="testAuthorsFilter" class="Tests\Feature\BookListTest" classname="Tests.Feature.BookListTest" file="/var/www/jbimo-a/tests/Feature/BookListTest.php" line="143" assertions="6" time="0.036491"/>
-    <testcase name="testTitleSort" class="Tests\Feature\BookListTest" classname="Tests.Feature.BookListTest" file="/var/www/jbimo-a/tests/Feature/BookListTest.php" line="173" assertions="4" time="0.017880"/>
-    <testcase name="testAvgReviewSort" class="Tests\Feature\BookListTest" classname="Tests.Feature.BookListTest" file="/var/www/jbimo-a/tests/Feature/BookListTest.php" line="191" assertions="3" time="0.020409"/>
-    <testcase name="testPagination" class="Tests\Feature\BookListTest" classname="Tests.Feature.BookListTest" file="/var/www/jbimo-a/tests/Feature/BookListTest.php" line="222" assertions="4" time="0.052440"/>
+  <testsuite name="Tests\Feature\BookPostTest" file="/var/www/jbimo-a/tests/Feature/BookPostTest.php" tests="24" assertions="71" errors="0" warnings="0" failures="0" skipped="0" time="1.450968">
+    <testcase name="testDenyGuestAccess" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/jbimo-a/tests/Feature/BookPostTest.php" line="13" assertions="1" time="1.113005"/>
+    <testcase name="testDenyNonAdminUserAccess" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/jbimo-a/tests/Feature/BookPostTest.php" line="26" assertions="1" time="0.010585"/>
+    <testcase name="testSuccessfulPost" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/jbimo-a/tests/Feature/BookPostTest.php" line="43" assertions="6" time="0.056287"/>
+    <testsuite name="Tests\Feature\BookPostTest::testValidation" tests="21" assertions="63" errors="0" warnings="0" failures="0" skipped="0" time="0.271091">
+      <testcase name="testValidation with data set #0" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/jbimo-a/tests/Feature/BookPostTest.php" line="71" assertions="3" time="0.015048"/>
+      <testcase name="testValidation with data set #1" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/jbimo-a/tests/Feature/BookPostTest.php" line="71" assertions="3" time="0.011976"/>
+      <testcase name="testValidation with data set #2" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/jbimo-a/tests/Feature/BookPostTest.php" line="71" assertions="3" time="0.011953"/>
+      <testcase name="testValidation with data set #3" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/jbimo-a/tests/Feature/BookPostTest.php" line="71" assertions="3" time="0.012055"/>
+      <testcase name="testValidation with data set #4" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/jbimo-a/tests/Feature/BookPostTest.php" line="71" assertions="3" time="0.014258"/>
+      <testcase name="testValidation with data set #5" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/jbimo-a/tests/Feature/BookPostTest.php" line="71" assertions="3" time="0.013799"/>
+      <testcase name="testValidation with data set #6" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/jbimo-a/tests/Feature/BookPostTest.php" line="71" assertions="3" time="0.013820"/>
+      <testcase name="testValidation with data set #7" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/jbimo-a/tests/Feature/BookPostTest.php" line="71" assertions="3" time="0.013527"/>
+      <testcase name="testValidation with data set #8" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/jbimo-a/tests/Feature/BookPostTest.php" line="71" assertions="3" time="0.012558"/>
+      <testcase name="testValidation with data set #9" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/jbimo-a/tests/Feature/BookPostTest.php" line="71" assertions="3" time="0.013193"/>
+      <testcase name="testValidation with data set #10" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/jbimo-a/tests/Feature/BookPostTest.php" line="71" assertions="3" time="0.012867"/>
+      <testcase name="testValidation with data set #11" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/jbimo-a/tests/Feature/BookPostTest.php" line="71" assertions="3" time="0.016331"/>
+      <testcase name="testValidation with data set #12" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/jbimo-a/tests/Feature/BookPostTest.php" line="71" assertions="3" time="0.014865"/>
+      <testcase name="testValidation with data set #13" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/jbimo-a/tests/Feature/BookPostTest.php" line="71" assertions="3" time="0.018392"/>
+      <testcase name="testValidation with data set #14" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/jbimo-a/tests/Feature/BookPostTest.php" line="71" assertions="3" time="0.013972"/>
+      <testcase name="testValidation with data set #15" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/jbimo-a/tests/Feature/BookPostTest.php" line="71" assertions="3" time="0.012026"/>
+      <testcase name="testValidation with data set #16" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/jbimo-a/tests/Feature/BookPostTest.php" line="71" assertions="3" time="0.011717"/>
+      <testcase name="testValidation with data set #17" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/jbimo-a/tests/Feature/BookPostTest.php" line="71" assertions="3" time="0.009490"/>
+      <testcase name="testValidation with data set #18" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/jbimo-a/tests/Feature/BookPostTest.php" line="71" assertions="3" time="0.010074"/>
+      <testcase name="testValidation with data set #19" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/jbimo-a/tests/Feature/BookPostTest.php" line="71" assertions="3" time="0.009326"/>
+      <testcase name="testValidation with data set #20" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/var/www/jbimo-a/tests/Feature/BookPostTest.php" line="71" assertions="3" time="0.009846"/>
+    </testsuite>
   </testsuite>
 </testsuites>
