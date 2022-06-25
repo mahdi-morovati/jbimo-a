@@ -20,8 +20,9 @@ class BookReviewResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'avg' => $this->avg,
-            'count' => $this->count,
+            'review' => $this->review,
+            'comment' => $this->comment,
+            'user' => new UserResource($this->user)
         ];
     }
 }

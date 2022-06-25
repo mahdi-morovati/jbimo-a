@@ -1,88 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="Tests\Feature\BookReviewTest" file="/var/www/jbimo-a/tests/Feature/BookReviewTest.php" tests="11" assertions="11" errors="0" warnings="0" failures="10" skipped="0" time="1.201755">
-    <testcase name="testDenyGuestAccess" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/var/www/jbimo-a/tests/Feature/BookReviewTest.php" line="15" assertions="1" time="1.089404"/>
-    <testcase name="testSuccessfulPost" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/var/www/jbimo-a/tests/Feature/BookReviewTest.php" line="27" assertions="1" time="0.027039">
-      <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testSuccessfulPost
-Expected response status code [201] but received 200.
-  Failed asserting that 201 is identical to 200.
-
-/var/www/jbimo-a/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
-/var/www/jbimo-a/tests/Feature/BookReviewTest.php:39</failure>
-    </testcase>
-    <testsuite name="Tests\Feature\BookReviewTest::testValidation" tests="9" assertions="9" errors="0" warnings="0" failures="9" skipped="0" time="0.085312">
-      <testcase name="testValidation with data set #0" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/var/www/jbimo-a/tests/Feature/BookReviewTest.php" line="65" assertions="1" time="0.009511">
-        <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testValidation with data set #0 (array(null), 'review')
-Expected response status code [422] but received 200.
-  Failed asserting that 422 is identical to 200.
-
-/var/www/jbimo-a/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
-/var/www/jbimo-a/tests/Feature/BookReviewTest.php:80</failure>
-      </testcase>
-      <testcase name="testValidation with data set #1" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/var/www/jbimo-a/tests/Feature/BookReviewTest.php" line="65" assertions="1" time="0.010034">
-        <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testValidation with data set #1 (array(''), 'review')
-Expected response status code [422] but received 200.
-  Failed asserting that 422 is identical to 200.
-
-/var/www/jbimo-a/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
-/var/www/jbimo-a/tests/Feature/BookReviewTest.php:80</failure>
-      </testcase>
-      <testcase name="testValidation with data set #2" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/var/www/jbimo-a/tests/Feature/BookReviewTest.php" line="65" assertions="1" time="0.009389">
-        <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testValidation with data set #2 (array(0), 'review')
-Expected response status code [422] but received 200.
-  Failed asserting that 422 is identical to 200.
-
-/var/www/jbimo-a/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
-/var/www/jbimo-a/tests/Feature/BookReviewTest.php:80</failure>
-      </testcase>
-      <testcase name="testValidation with data set #3" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/var/www/jbimo-a/tests/Feature/BookReviewTest.php" line="65" assertions="1" time="0.010036">
-        <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testValidation with data set #3 (array(11), 'review')
-Expected response status code [422] but received 200.
-  Failed asserting that 422 is identical to 200.
-
-/var/www/jbimo-a/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
-/var/www/jbimo-a/tests/Feature/BookReviewTest.php:80</failure>
-      </testcase>
-      <testcase name="testValidation with data set #4" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/var/www/jbimo-a/tests/Feature/BookReviewTest.php" line="65" assertions="1" time="0.008563">
-        <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testValidation with data set #4 (array(3.5), 'review')
-Expected response status code [422] but received 200.
-  Failed asserting that 422 is identical to 200.
-
-/var/www/jbimo-a/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
-/var/www/jbimo-a/tests/Feature/BookReviewTest.php:80</failure>
-      </testcase>
-      <testcase name="testValidation with data set #5" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/var/www/jbimo-a/tests/Feature/BookReviewTest.php" line="65" assertions="1" time="0.008977">
-        <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testValidation with data set #5 (array(array()), 'review')
-Expected response status code [422] but received 200.
-  Failed asserting that 422 is identical to 200.
-
-/var/www/jbimo-a/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
-/var/www/jbimo-a/tests/Feature/BookReviewTest.php:80</failure>
-      </testcase>
-      <testcase name="testValidation with data set #6" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/var/www/jbimo-a/tests/Feature/BookReviewTest.php" line="65" assertions="1" time="0.009240">
-        <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testValidation with data set #6 (array(null), 'comment')
-Expected response status code [422] but received 200.
-  Failed asserting that 422 is identical to 200.
-
-/var/www/jbimo-a/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
-/var/www/jbimo-a/tests/Feature/BookReviewTest.php:80</failure>
-      </testcase>
-      <testcase name="testValidation with data set #7" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/var/www/jbimo-a/tests/Feature/BookReviewTest.php" line="65" assertions="1" time="0.009487">
-        <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testValidation with data set #7 (array(''), 'comment')
-Expected response status code [422] but received 200.
-  Failed asserting that 422 is identical to 200.
-
-/var/www/jbimo-a/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
-/var/www/jbimo-a/tests/Feature/BookReviewTest.php:80</failure>
-      </testcase>
-      <testcase name="testValidation with data set #8" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/var/www/jbimo-a/tests/Feature/BookReviewTest.php" line="65" assertions="1" time="0.010075">
-        <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testValidation with data set #8 (array(array()), 'comment')
-Expected response status code [422] but received 200.
-  Failed asserting that 422 is identical to 200.
-
-/var/www/jbimo-a/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
-/var/www/jbimo-a/tests/Feature/BookReviewTest.php:80</failure>
-      </testcase>
+  <testsuite name="Tests\Feature\BookReviewTest" file="/var/www/jbimo-a/tests/Feature/BookReviewTest.php" tests="11" assertions="34" errors="0" warnings="0" failures="0" skipped="0" time="1.265476">
+    <testcase name="testDenyGuestAccess" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/var/www/jbimo-a/tests/Feature/BookReviewTest.php" line="15" assertions="1" time="1.148610"/>
+    <testcase name="testSuccessfulPost" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/var/www/jbimo-a/tests/Feature/BookReviewTest.php" line="27" assertions="6" time="0.018708"/>
+    <testsuite name="Tests\Feature\BookReviewTest::testValidation" tests="9" assertions="27" errors="0" warnings="0" failures="0" skipped="0" time="0.098159">
+      <testcase name="testValidation with data set #0" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/var/www/jbimo-a/tests/Feature/BookReviewTest.php" line="66" assertions="3" time="0.010490"/>
+      <testcase name="testValidation with data set #1" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/var/www/jbimo-a/tests/Feature/BookReviewTest.php" line="66" assertions="3" time="0.011398"/>
+      <testcase name="testValidation with data set #2" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/var/www/jbimo-a/tests/Feature/BookReviewTest.php" line="66" assertions="3" time="0.008966"/>
+      <testcase name="testValidation with data set #3" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/var/www/jbimo-a/tests/Feature/BookReviewTest.php" line="66" assertions="3" time="0.009928"/>
+      <testcase name="testValidation with data set #4" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/var/www/jbimo-a/tests/Feature/BookReviewTest.php" line="66" assertions="3" time="0.010081"/>
+      <testcase name="testValidation with data set #5" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/var/www/jbimo-a/tests/Feature/BookReviewTest.php" line="66" assertions="3" time="0.010593"/>
+      <testcase name="testValidation with data set #6" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/var/www/jbimo-a/tests/Feature/BookReviewTest.php" line="66" assertions="3" time="0.012531"/>
+      <testcase name="testValidation with data set #7" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/var/www/jbimo-a/tests/Feature/BookReviewTest.php" line="66" assertions="3" time="0.011920"/>
+      <testcase name="testValidation with data set #8" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/var/www/jbimo-a/tests/Feature/BookReviewTest.php" line="66" assertions="3" time="0.012252"/>
     </testsuite>
   </testsuite>
 </testsuites>

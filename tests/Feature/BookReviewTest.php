@@ -2,12 +2,9 @@
 
 namespace Tests\Feature;
 
-use App\Author;
 use App\Book;
 use App\BookReview;
 use App\User;
-use Illuminate\Foundation\Testing\TestResponse;
-use Illuminate\Http\Response;
 use Tests\TestCase;
 
 class BookReviewTest extends TestCase
@@ -26,6 +23,7 @@ class BookReviewTest extends TestCase
 
     public function testSuccessfulPost()
     {
+        $this->withoutExceptionHandling();
         $user = factory(User::class)->state('admin')->create();
         $book = factory(Book::class)->create();
 

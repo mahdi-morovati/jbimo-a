@@ -5,17 +5,15 @@ declare (strict_types=1);
 namespace App\Http\Controllers;
 
 use App\Book;
-use App\BookReview;
 use App\Http\Requests\PostBookRequest;
 use App\Http\Requests\PostBookReviewRequest;
 use App\Http\Resources\BookResource;
 use App\Http\Resources\BookReviewResource;
 use App\Services\Book\BookPaginateService;
 use App\Services\Book\BookStoreService;
+use App\Services\BookReview\BookReviewStoreService;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
 
 class BooksController extends Controller
 {
@@ -27,13 +25,13 @@ class BooksController extends Controller
         return BookResource::collection($bookPaginateService->paginate($request));
     }
 
-    public function post(PostBookRequest $request, BookStoreService $bookStoreService)
+    public function post(PostBookRequest $request, BookStoreService $bookStoreService): BookResource
     {
         return new BookResource($bookStoreService->store($request));
     }
 
-    public function postReview(Book $book, PostBookReviewRequest $request)
+    public function postReview(Book $book, PostBookReviewRequest $request, BookReviewStoreService $bookReviewService): BookReviewResource
     {
-        //@todo code here
+        return new BookReviewResource($bookReviewService->store($book, $request));
     }
 }

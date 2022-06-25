@@ -14,7 +14,7 @@ class PostBookRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'isbn' => 'required|digits:13',
+            'isbn' => 'required|digits:13|unique:books,isbn',
             'title' => 'required|string',
             'description' => 'required|string',
             'authors' => 'required|present|array',
