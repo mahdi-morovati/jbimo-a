@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="1.189619">
-    <testsuite name="Feature" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="1.189619">
-      <testsuite name="Tests\Feature\BookReviewTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookReviewTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="1.189619">
-        <testcase name="testDenyGuestAccess" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/home/dolphin/Downloads/Telegram Desktop/tasks/a/example-app/tests/Feature/BookReviewTest.php" line="15" assertions="1" time="1.189619"/>
-      </testsuite>
-    </testsuite>
+  <testsuite name="Tests\Feature\BookListTest" file="/var/www/jbimo-a/tests/Feature/BookListTest.php" tests="1" assertions="6" errors="0" warnings="0" failures="0" skipped="0" time="1.088967">
+    <testcase name="testAuthorsFilter" class="Tests\Feature\BookListTest" classname="Tests.Feature.BookListTest" file="/var/www/jbimo-a/tests/Feature/BookListTest.php" line="143" assertions="6" time="1.088967"/>
   </testsuite>
 </testsuites>

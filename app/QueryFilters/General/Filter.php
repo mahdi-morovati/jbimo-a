@@ -2,6 +2,7 @@
 namespace App\QueryFilters\General;
 
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Str;
 
 abstract class Filter
@@ -16,7 +17,7 @@ abstract class Filter
 
     }
 
-    protected abstract function applyFilter($builder);
+    protected abstract function applyFilter(Builder $builder);
 
     protected function filterName()
     {

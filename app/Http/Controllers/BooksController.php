@@ -18,9 +18,11 @@ use Illuminate\Support\Facades\DB;
 
 class BooksController extends Controller
 {
+    const PAGINATE_PER_PAGE = 50;
+
     public function getCollection(Request $request, BookPaginateService $bookPaginateService)
     {
-        if ($request->page) return BookResource::collection($bookPaginateService->paginate($request, (int)$request->page));
+        if ($request->page) return BookResource::collection($bookPaginateService->paginate($request, self::PAGINATE_PER_PAGE));
         return BookResource::collection($bookPaginateService->paginate($request));
     }
 

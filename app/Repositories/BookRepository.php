@@ -3,11 +3,11 @@
 namespace App\Repositories;
 
 use App\Book;
-use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Builder;
 
 class BookRepository extends BaseRepository
 {
-    public function model()
+    public function model(): string
     {
         return Book::class;
     }
@@ -17,7 +17,7 @@ class BookRepository extends BaseRepository
         return $this->model()::query()->with(['reviews', 'authors']);
     }
 
-    public function orderQuery($query, string $column, string $direction)
+    public function orderQuery(Builder $query, string $column, string $direction): Builder
     {
         return $query->orderBy($column, $direction);
     }
@@ -26,6 +26,15 @@ class BookRepository extends BaseRepository
     {
         $books = $this->model()::query();
         return $this->paginateQuery($books, $perPage);
-        return;
+    }
+
+    public function withAvg(Builder $query, string $relation, string $column): Builder
+    {
+        return $query->withAvg($relation, $column);
+    }
+
+    public function withCount(Builder $query, string $relation): Builder
+    {
+        return $query->withCount($relation);
     }
 }

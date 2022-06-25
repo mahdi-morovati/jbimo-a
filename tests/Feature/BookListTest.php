@@ -9,7 +9,7 @@ use App\User;
 use Illuminate\Testing\TestResponse;
 use Tests\TestCase;
 
-class BooksListTest extends TestCase
+class BookListTest extends TestCase
 {
     public function testResponseStructure()
     {
@@ -27,7 +27,7 @@ class BooksListTest extends TestCase
             $book->reviews()->saveMany($reviews);
         });
 
-        $response = $this->getJson('/api/books?sortColumn=title&sortDirection=ASC&page=15');
+        $response = $this->getJson('/api/books?sortColumn=title&sortDirection=ASC&page=1');
         $response->assertStatus(200);
 
         $response->assertJsonStructure([
@@ -90,7 +90,8 @@ class BooksListTest extends TestCase
 
     public function testTitleFilter()
     {
-        $book1 = factory(Book::class)->create(['title' => 'PHP for begginers']) ->each(function (Book $book) {
+        $book1 = factory(Book::class)->create(['title' => 'PHP for begginers']);
+        $book1->each(function (Book $book) {
             $book->save();
             $book->authors()->saveMany([
                 factory(Author::class)->create(),
@@ -102,7 +103,8 @@ class BooksListTest extends TestCase
             $book->reviews()->saveMany($reviews);
         });
 
-        $book2 = factory(Book::class)->create(['title' => 'Javascript for dummies']) ->each(function (Book $book) {
+        $book2 = factory(Book::class)->create(['title' => 'Javascript for dummies']);
+        $book2->each(function (Book $book) {
             $book->save();
             $book->authors()->saveMany([
                 factory(Author::class)->create(),
@@ -114,7 +116,8 @@ class BooksListTest extends TestCase
             $book->reviews()->saveMany($reviews);
         });
 
-        $book3 = factory(Book::class)->create(['title' => 'Advanced Python']) ->each(function (Book $book) {
+        $book3 = factory(Book::class)->create(['title' => 'Advanced Python']);
+        $book3->each(function (Book $book) {
             $book->save();
             $book->authors()->saveMany([
                 factory(Author::class)->create(),

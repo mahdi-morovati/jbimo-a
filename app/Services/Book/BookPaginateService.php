@@ -4,6 +4,7 @@
 namespace App\Services\Book;
 
 
+use App\QueryFilters\General\Authors;
 use App\QueryFilters\General\Title;
 use Illuminate\Http\Request;
 
@@ -14,12 +15,12 @@ class BookPaginateService extends BookCommonService
     {
 
         $baseQuery = $this->repository->getBaseQuery();
-//        dd($baseQuery->get()->toArray(), __METHOD__);
+        $baseQuery = $this->repository->withAvg($baseQuery, 'reviews', 'review');
+        $baseQuery = $this->repository->withCount($baseQuery, 'reviews');
         if (isset($request->sortColumn) && isset($request->sortDirection)) {
-            $orderQuery = $this->repository->orderQuery($baseQuery, $request->sortColumn, $request->sortDirection);
-            $filteredQuery = $this->sendThroughPipeline($orderQuery, [Title::class]);
+            $baseQuery = $this->repository->orderQuery($baseQuery, $request->sortColumn, $request->sortDirection);
         }
-        $filteredQuery = $this->sendThroughPipeline($baseQuery, [Title::class]);
-        return $this->repository->paginateQuery($filteredQuery, $perPage);
+        $baseQuery = $this->sendThroughPipeline($baseQuery, [Title::class, Authors::class]);
+        return $this->repository->paginateQuery($baseQuery, $perPage);
     }
 }
