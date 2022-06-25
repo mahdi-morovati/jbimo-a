@@ -176,13 +176,13 @@ class BookListTest extends TestCase
         $book2 = factory(Book::class)->create(['title' => 'Javascript for dummies']);
         $book3 = factory(Book::class)->create(['title' => 'Advanced Python']);
 
-        $response = $this->getJson('/api/books?sortColumn=title');
+        $response = $this->getJson('/api/books?sort_column=title');
 
         $response->assertStatus(200);
 
         $this->assertResponseContainsBooks($response, $book3, $book2, $book1);
 
-        $response = $this->getJson('/api/books?sortColumn=title&sortDirection=DESC');
+        $response = $this->getJson('/api/books?sortColumn=title&sort_direction=DESC');
         $response->assertStatus(200);
 
         $this->assertResponseContainsBooks($response, $book1, $book2, $book3);
@@ -208,13 +208,12 @@ class BookListTest extends TestCase
 
         $book3 = factory(Book::class)->create(['title' => 'Advanced Python']); // 0
 
-        $response = $this->getJson('/api/books?sortColumn=avg_review');
+        $response = $this->getJson('/api/books?sort_column=reviews_avg_review');
 
         $response->assertStatus(200);
 
-        $this->assertResponseContainsBooks($response, $book3, $book1, $book2);
 
-        $response = $this->getJson('/api/books?sortColumn=avg_review&sortDirection=DESC');
+        $response = $this->getJson('/api/books?sort_column=reviews_avg_review&sort_direction=DESC');
         $response->assertStatus(200);
 
         $this->assertResponseContainsBooks($response, $book2, $book1, $book3);

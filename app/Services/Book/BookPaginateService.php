@@ -5,6 +5,7 @@ namespace App\Services\Book;
 
 
 use App\QueryFilters\General\Authors;
+use App\QueryFilters\General\SortColumn;
 use App\QueryFilters\General\Title;
 use Illuminate\Http\Request;
 
@@ -20,7 +21,7 @@ class BookPaginateService extends BookCommonService
         if (isset($request->sortColumn) && isset($request->sortDirection)) {
             $baseQuery = $this->repository->orderQuery($baseQuery, $request->sortColumn, $request->sortDirection);
         }
-        $baseQuery = $this->sendThroughPipeline($baseQuery, [Title::class, Authors::class]);
+        $baseQuery = $this->sendThroughPipeline($baseQuery, [Title::class, Authors::class, SortColumn::class]);
         return $this->repository->paginateQuery($baseQuery, $perPage);
     }
 }

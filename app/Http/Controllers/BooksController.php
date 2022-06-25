@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\DB;
 
 class BooksController extends Controller
 {
-    const PAGINATE_PER_PAGE = 50;
+    const PAGINATE_PER_PAGE = 15;
 
     public function getCollection(Request $request, BookPaginateService $bookPaginateService)
     {
